@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  order: one
+  amount: 1.5
+  payment_method: MyString
+  card_number: MyString
+  cardholder_name: MyString
+  expiration_date: MyString
+  cvc: MyString
+
+two:
+  order: two
+  amount: 1.5
+  payment_method: MyString
+  card_number: MyString
+  cardholder_name: MyString
+  expiration_date: MyString
+  cvc: MyString
