@@ -6,15 +6,16 @@ puts 'Seeding...'
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
     email: Faker::Internet.email,
-    password: 'password123'
+    password_digest: Faker::Internet.password
   )
 end
 
 
 5.times do
   Item.create!(
-    description: Faker::Food.dish,
-    price: Faker::Number.decimal(l_digits: 2),
+    name: Faker::Food.dish,
+    description: Faker::Food.description,
+    price: Faker::Number.between(from: 10, to: 100),
     category: Faker::Food.ethnic_category,
     imgURL: Faker::LoremFlickr.image(size: "300x300", search_terms: ['food'])
   )
@@ -24,14 +25,14 @@ end
 5.times do
   Order.create!(
     user_id: rand(1..2),
-    item_id: rand(1..5)
+    item_id: rand(8..13)
   )
 end
 
 
 5.times do
   quantity = rand(1..5)
-  item = Item.find(rand(1..5))
+  item = Item.find(rand(8..13))
   subtotal = quantity * item.price
 
   OrderItem.create!(
