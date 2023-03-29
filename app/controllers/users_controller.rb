@@ -1,4 +1,13 @@
 class UsersController < ApplicationController
+
+#     before_action :allow_cors
+
+# def allow_cors
+#   headers['Access-Control-Allow-Origin'] = '*'
+#   headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE, OPTIONS'
+#   headers['Access-Control-Allow-Headers'] = 'Origin, Content-Type, Accept, Authorization, Token'
+# end
+
     
     def index
         render json: User.all, status: :ok
@@ -8,7 +17,9 @@ class UsersController < ApplicationController
         user = User.create(user_params)
         if user.valid?
             session[:user_id] = user.id
+            
             render json: user, status: :created
+            redirect_to 'http://localhost:4000', allow_other_host: true
         else
             render json: { errors: user.errors.full_messages }, status: :unprocessable_entity
         end
