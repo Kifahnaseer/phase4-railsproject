@@ -8,18 +8,17 @@ class UsersController < ApplicationController
 #   headers['Access-Control-Allow-Headers'] = 'Origin, Content-Type, Accept, Authorization, Token'
 # end
 
-    
+
+
     def index
         render json: User.all, status: :ok
     end
     
-    def create
+    def signup
         user = User.create(user_params)
         if user.valid?
-            session[:user_id] = user.id
-            
+            session[:user_id] = user.id  
             render json: user, status: :created
-            redirect_to 'http://localhost:4000', allow_other_host: true
         else
             render json: { errors: user.errors.full_messages }, status: :unprocessable_entity
         end
