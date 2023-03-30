@@ -1,0 +1,30 @@
+<h1>Make a Payment</h1>
+
+<%= form_tag charges_path do %>
+  <div class="form-group">
+    <%= label_tag :amount, "Amount:" %>
+    <%= text_field_tag :amount, nil, class: "form-control", placeholder: "Enter amount in KES" %>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag :name, "Name on card:" %>
+    <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter name on card" %>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag :card_number, "Credit card number:" %>
+    <%= text_field_tag :card_number, nil, class: "form-control", placeholder: "Enter credit card number" %>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag :expiry_date, "Expiry date (MM/YY):" %>
+    <%= text_field_tag :expiry_date, nil, class: "form-control", placeholder: "Enter expiry date" %>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag :cvc, "CVC:" %>
+    <%= text_field_tag :cvv, nil, class: "form-control", placeholder: "Enter CVC" %>
+  </div>
+
+  <%= submit_tag "Pay", class: "btn btn-primary" %>
+<% end %>
