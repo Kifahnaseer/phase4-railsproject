@@ -1,7 +1,3 @@
-# frozen_string_literal: true
-
-Item.destroy_all
-
 # appetizers
 Item.create(name: 'Suya Skewers', description: 'Grilled meat skewers coated in spicy peanut sauce', price: 12, category: 'appetizers', imgURL: 'https://cheflolaskitchen.com/wp-content/uploads/2023/01/nigerian-suya-32-683x1024.jpg')
 Item.create(name: 'Puff Puff', description: 'Deep-fried dough balls served with a spicy dipping sauce', price: 8, category: 'appetizers', imgURL: 'https://keeshaskitchen.com/wp-content/uploads/2022/02/20220107091914-puff-20puff-20beignets.jpg')
