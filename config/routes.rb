@@ -7,8 +7,7 @@ Rails.application.routes.draw do
   resources :order_items
   resources :orders
   resources :items, only: [:index, :show]
-  resources :users
- 
+  # resources :users
 
   post 'users/login', to: 'users#login'
   post 'users/signup', to: 'users#signup'
