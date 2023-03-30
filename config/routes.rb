@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :payments
   resources :order_items
   resources :orders
-  resources :items
+  resources :items, only: [:index, :show]
   resources :users
 
   post 'users/login', to: 'users#login'
