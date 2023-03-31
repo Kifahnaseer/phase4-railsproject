@@ -13,6 +13,11 @@ Rails.application.routes.draw do
   post 'users/signup', to: 'users#signup'
   delete 'users/logout', to: 'users#destroy'
 
+  get '/orders', to: 'orders#index'
+  get '/orders/:id', to: 'orders#show'
+  post '/orders/create', to: 'orders#create'
+  delete '/orders/delete/:id', to: 'orders#destroy'
+
  
 
  
