@@ -1,15 +1,5 @@
 class UsersController < ApplicationController
 
-#     before_action :allow_cors
-
-# def allow_cors
-#   headers['Access-Control-Allow-Origin'] = '*'
-#   headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE, OPTIONS'
-#   headers['Access-Control-Allow-Headers'] = 'Origin, Content-Type, Accept, Authorization, Token'
-# end
-
-
-
     def index
         render json: User.all, status: :ok
     end
@@ -32,6 +22,11 @@ class UsersController < ApplicationController
         else
             render json: { error: 'Invalid email or password' }, status: :unauthorized
         end
+    end
+
+    def destroy
+        session.delete :user_id
+        head :no_content
     end
 
     private

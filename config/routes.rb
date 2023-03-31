@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   post 'users/login', to: 'users#login'
   post 'users/signup', to: 'users#signup'
+  delete 'users/logout', to: 'users#destroy'
 
  
 

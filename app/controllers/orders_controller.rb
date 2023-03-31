@@ -48,4 +48,3 @@ class OrdersController < ApplicationController
         params.require(:order).permit(:user_id, :item_id)
       end
   end
-  
