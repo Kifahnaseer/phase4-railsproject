@@ -18,6 +18,4 @@ class PaymentsController < ApplicationController
     def payment_params
         params.require(:payment).permit(:amount, :credit_card_number, :expiration_date, :cvv)
     end
-    end
-      
 end
