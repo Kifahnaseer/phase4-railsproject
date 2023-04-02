@@ -11,6 +11,11 @@ module RailsProject
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
+      
+  # Adding cookies and session middleware
+  config.middleware.use ActionDispatch::Cookies
+  config.middleware.use ActionDispatch::Session::CookieStore
+
     config.middleware.insert_before 0, Rack::Cors do
       allow do
         origins 'frontend-rosy-xi.vercel.app'
