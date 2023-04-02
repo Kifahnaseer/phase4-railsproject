@@ -13,10 +13,11 @@ module RailsProject
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins '*' # Replace * with your domain or IP address
+        origins 'frontend-rosy-xi.vercel.app'
         resource '*', headers: :any, methods: [:get, :post, :put, :patch, :delete, :options]
       end
     end
+    
     
 
     # Configuration for the application, engines, and railties goes here.
