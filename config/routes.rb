@@ -9,9 +9,10 @@ Rails.application.routes.draw do
   resources :items, only: [:index, :show]
   resources :users
 
-  post 'users/login', to: 'users#login'
-  post 'users/signup', to: 'users#create'
-  delete 'users/logout', to: 'users#destroy'
+  post '/login', to: 'sessions#create'
+  post '/signup', to: 'users#create'
+  delete '/logout', to: 'sessions#destroy'
+  get '/auth', to: 'users#show'
 
   get '/orders', to: 'orders#index'
   get '/orders/:id', to: 'orders#show'
