@@ -1,10 +1,11 @@
 class UsersController < ApplicationController
+    skip_before_action :authorized, only: :create
 
     def index
         render json: User.all, status: :ok
     end
     
-    def signup
+    def create
         user = User.create(user_params)
         if user.valid?
             session[:user_id] = user.id  
