@@ -1,25 +1,57 @@
-# README
+# Comrades Treat API
+This API provides powers our application, [Comrade Treat](git@github.com:Kifahnaseer/phase4-reactproject.git). The API is built using Ruby on Rails.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Technologies Used
+This application has been built with the following tools:
 
-Things you may want to cover:
+![ruby](https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white)
 
-* Ruby version
 
-* System dependencies
+- **Ruby `v2.7.+`**
+- **Rails `v7.0.+`**
+- **activeRecord `v7.0.4`**
+- **sqlite3 `v3.0`**
 
-* Configuration
 
-* Database creation
+## Project Setup
+You can set up this repository by following this manual
 
-* Database initialization
+1. Clone the repository
+    ```{shell}
+   git clone git@github.com:Kifahnaseer/phase4-railsproject.git
+   ```
+   - Go into the project directory
 
-* How to run the test suite
+    ```bash
+        cd phase4-railsproject
+    ```
+2. Ensure the ruby gems are set up in your machine
+    ```{shell}
+   bundle install
+   ```
+3. Perform any pending database migrations
+   ```{shell}
+   rails db:migrate
+   ```
+4. Run the application
+    ```{shell}
+    rails server
+    ```
+5. Open the application from your browser
+    ```
+   http://localhost:3000
+   ```
+## Contributers
+ ![](http://ForTheBadge.com/images/badges/built-by-developers.svg)
 
-* Services (job queues, cache servers, search engines, etc.)
+1. [khalid-zein](https://github.com/khalid-zein)
+2. [Kelvin Ngechu](https://github.com/Ngechuk)
+3. [Lawrence](https://github.com/Lawrence137)
+4. [Kifahnaseer](https://github.com/Kifahnaseer)
 
-* Deployment instructions
 
-* ...
-# railsproject
+## license
+- [MIT License](./LICENSE.md)
+### **Copyright**
+   - Comrade Treat (c) 2023
+
