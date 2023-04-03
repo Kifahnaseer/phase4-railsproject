@@ -18,7 +18,7 @@ module RailsProject
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins 'frontend-rosy-xi.vercel.app'
+        origins '*'
         resource '*', headers: :any, methods: [:get, :post, :put, :patch, :delete, :options]
       end
     end
